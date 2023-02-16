@@ -133,6 +133,7 @@ const Sidebar = ({
                     STORMVISION
                   </Typography>
                 </Box>
+
                 {!isNonMobile && (
                   <IconButton onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
                     <ChevronLeft />
@@ -140,6 +141,7 @@ const Sidebar = ({
                 )}
               </FlexBetween>
             </Box>
+            <Divider />
             <List>
               {navItems.map(({ text, icon }) => {
                 if (!icon) {
@@ -202,24 +204,24 @@ const Sidebar = ({
                 borderRadius="50%"
                 sx={{ objectFit: "cover" }}
               />
-                <Box textAlign="left">
-                  <Typography
-                    fontWeight="bold"
-                    fontSize="0.9rem"
-                    sx={{ color: theme.palette.secondary[100] }}
-                  >
-                    {user.name}
-                  </Typography>
-                  <Typography
-                    fontSize="0.8rem"
-                    sx={{ color: theme.palette.secondary[200] }}
-                  >
-                    {user.occupation}
-                  </Typography>
-                </Box>
-                <SettingsOutlined
-                  sx={{ color: theme.palette.secondary[300], fontSize: "25px" }}
-                />
+              <Box textAlign="left">
+                <Typography
+                  fontWeight="bold"
+                  fontSize="0.9rem"
+                  sx={{ color: theme.palette.secondary[100] }}
+                >
+                  {user.name}
+                </Typography>
+                <Typography
+                  fontSize="0.8rem"
+                  sx={{ color: theme.palette.secondary[200] }}
+                >
+                  {user.occupation}
+                </Typography>
+              </Box>
+              <SettingsOutlined
+                sx={{ color: theme.palette.secondary[300], fontSize: "25px" }}
+              />
             </FlexBetween>
           </Box>
         </Drawer>
